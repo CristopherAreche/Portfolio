@@ -8,4 +8,4 @@ export const SITE_NAME = "Cristopher Areche";
 export const SITE_TITLE = "Cristopher Areche | Software Engineer";
 export const SITE_DESCRIPTION =
   "Software Engineer specializing in building scalable web applications with React, Next.js, Node.js, and PostgreSQL. Explore my portfolio of full-stack projects.";
-export const SITE_OG_IMAGE = "/assets/og-image.webp";
+export const SITE_OG_IMAGE = "/assets/profile/portrait.jpg";

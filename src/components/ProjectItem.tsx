@@ -81,15 +81,19 @@ const ProjectItem = ({
         },
       };
 
+  const imageFrameClassName =
+    "group relative block w-full max-w-[324px] overflow-hidden rounded-xl border border-slate-900/15 shadow-lg shadow-slate-300/80 dark:border-white/15 dark:shadow-transparent tablet:w-[360px] tablet:max-w-none laptop:w-[390px]";
+
   const projectImage = (
-    <Image
-      className="tablet:max-w-[340px] tablet:h-[270px] rounded-xl border border-slate-900/15 shadow-lg shadow-slate-300/80 transition-transform duration-300 ease-out group-hover:scale-[1.03] group-hover:-translate-y-1 group-focus-visible:scale-[1.03] group-focus-visible:-translate-y-1 dark:border-white/15 dark:shadow-transparent"
-      src={image}
-      width={324}
-      height={231}
-      sizes="(min-width: 1440px) 340px, (min-width: 768px) 40vw, 92vw"
-      alt={`Screenshot of ${name} project`}
-    />
+    <div className="relative aspect-[16/9] w-full">
+      <Image
+        className="object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03] group-hover:-translate-y-1 group-focus-visible:scale-[1.03] group-focus-visible:-translate-y-1"
+        src={image}
+        fill
+        sizes="(min-width: 1440px) 390px, (min-width: 1024px) 390px, (min-width: 768px) 360px, 92vw"
+        alt={`Screenshot of ${name} project`}
+      />
+    </div>
   );
 
   const projectImagePreview =
@@ -99,13 +103,13 @@ const ProjectItem = ({
         target="_blank"
         rel="noopener noreferrer"
         aria-label={t.projects.visitWebsiteAria(name)}
-        className="group relative block cursor-pointer overflow-hidden rounded-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-green_text"
+        className={`${imageFrameClassName} cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-green_text`}
       >
         {projectImage}
         <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/20 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100" />
       </Link>
     ) : (
-      <div className="relative block overflow-hidden rounded-xl">
+      <div className={imageFrameClassName}>
         {projectImage}
       </div>
     );
@@ -115,9 +119,9 @@ const ProjectItem = ({
       {isOddId ? (
         <motion.div
           {...enterFromRight}
-          className="xsPhone:w-[324px] tablet:w-full tablet:gap-8 tablet:min-h-[300px] gap-4 dark:shadow-none flex flex-col md:flex-row items-center tablet:items-start justify-between"
+          className="w-full max-w-[324px] tablet:w-full tablet:max-w-none tablet:gap-8 tablet:min-h-[300px] gap-4 dark:shadow-none flex flex-col md:flex-row items-center tablet:items-start justify-between"
         >
-          <div className="flex flex-col h-full">
+          <div className="flex w-full flex-col h-full">
             {projectImagePreview}
             <div className="flex justify-between items-center mt-3">
               <h3 className="xsPhone:text-[25px] text-grey_text dark:text-green_text font-main-font p-0 m-0 xsPhone:block tablet:hidden">
@@ -144,7 +148,7 @@ const ProjectItem = ({
             </div>
           </div>
 
-          <div className="flex flex-col gap-3 tablet:w-auto tablet:h-full">
+          <div className="flex w-full flex-col gap-3 tablet:w-auto tablet:h-full">
             <h3 className="xsPhone:hidden tablet:block tablet:text-start text-[45px] font-main-font text-grey_text dark:text-green_text xl:text-left text-center">
               {name}
             </h3>
@@ -192,9 +196,9 @@ const ProjectItem = ({
       ) : (
         <motion.div
           {...enterFromLeft}
-          className="xsPhone:w-[324px] tablet:w-full tablet:gap-8 tablet:min-h-[300px] gap-4 dark:shadow-none flex flex-col-reverse md:flex-row items-center tablet:items-start justify-between"
+          className="w-full max-w-[324px] tablet:w-full tablet:max-w-none tablet:gap-8 tablet:min-h-[300px] gap-4 dark:shadow-none flex flex-col-reverse md:flex-row items-center tablet:items-start justify-between"
         >
-          <div className="flex flex-col gap-3 tablet:w-auto tablet:h-full">
+          <div className="flex w-full flex-col gap-3 tablet:w-auto tablet:h-full">
             <h3 className="xsPhone:hidden tablet:block tablet:text-end text-[45px] font-main-font text-grey_text dark:text-green_text text-center">
               {name}
             </h3>
@@ -242,7 +246,7 @@ const ProjectItem = ({
             </motion.div>
           </div>
 
-          <div className="flex flex-col h-full">
+          <div className="flex w-full flex-col h-full">
             {projectImagePreview}
             <div className="flex justify-between items-center mt-3">
               <h3 className="xsPhone:text-[25px] text-grey_text dark:text-green_text font-main-font p-0 m-0 xsPhone:block tablet:hidden">

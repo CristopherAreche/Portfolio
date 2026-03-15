@@ -43,6 +43,7 @@ export const uiTranslations: TranslationDictionary = {
       copyErrorToast: "Failed to copy email. Please try manually.",
       linkedinAria: "Visit LinkedIn profile",
       githubAria: "Visit GitHub profile",
+      professionalProfile: "Professional profile",
     },
     projects: {
       sectionLabel: "Projects",
@@ -105,6 +106,7 @@ export const uiTranslations: TranslationDictionary = {
       copyErrorToast: "No se pudo copiar el correo. Intenta manualmente.",
       linkedinAria: "Visitar perfil de LinkedIn",
       githubAria: "Visitar perfil de GitHub",
+      professionalProfile: "Perfil profesional",
     },
     projects: {
       sectionLabel: "Proyectos",

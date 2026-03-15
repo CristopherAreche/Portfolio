@@ -49,3 +49,87 @@
 .btn-primary {
   @apply shadow-xl shadow-slate-300/60 dark:shadow-black/20 rounded-xl uppercase bg-gradient-to-r from-green_text to-emerald-500 text-white;
 }
+
+.hero-card-stack {
+  --hero-card-width: 186px;
+  --hero-card-height: 276px;
+  --hero-card-offset: 54px;
+  --hero-card-depth: 16px;
+  --hero-card-rotation: 8deg;
+}
+
+@media (min-width: 768px) {
+  .hero-card-stack {
+    --hero-card-width: 248px;
+    --hero-card-height: 368px;
+    --hero-card-offset: 74px;
+    --hero-card-depth: 22px;
+    --hero-card-rotation: 9deg;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-card-stack {
+    --hero-card-width: 312px;
+    --hero-card-height: 464px;
+    --hero-card-offset: 96px;
+    --hero-card-depth: 28px;
+    --hero-card-rotation: 10deg;
+  }
+}
+
+.hero-card-stack__deck {
+  position: relative;
+  width: var(--hero-card-width);
+  height: var(--hero-card-height);
+  overflow: visible;
+  perspective: 1400px;
+  transform-style: preserve-3d;
+  touch-action: pan-y;
+}
+
+.hero-card-stack__card {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  transition:
+    transform 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 320ms ease,
+    filter 320ms ease;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.hero-card-stack__card--current {
+  z-index: 3;
+  opacity: 1;
+  filter: saturate(1);
+  transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+}
+
+.hero-card-stack__card--next {
+  z-index: 2;
+  opacity: 0.95;
+  filter: saturate(0.9);
+  transform: translate3d(var(--hero-card-offset), var(--hero-card-depth), -120px)
+    rotate(var(--hero-card-rotation)) scale(0.94);
+}
+
+.hero-card-stack__card--prev {
+  z-index: 1;
+  opacity: 0.95;
+  filter: saturate(0.9);
+  transform: translate3d(
+      calc(var(--hero-card-offset) * -1),
+      var(--hero-card-depth),
+      -120px
+    )
+    rotate(calc(var(--hero-card-rotation) * -1)) scale(0.94);
+}
+
+.hero-card-stack__card--hidden {
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate3d(0, 28px, -180px) rotate(0deg) scale(0.82);
+}

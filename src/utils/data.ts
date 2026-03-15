@@ -33,7 +33,7 @@ export const projects: Project[] = [
   {
     id: 1,
     name: "WON - Workout AI Planner",
-    image: "/assets/won.webp",
+    image: "/assets/projects/won.jpg",
     frontend_tech: [
       { name: "TypeScript", image: "/assets/skills/typescript.png" },
       { name: "React", image: "/assets/skills/react.png" },
@@ -57,7 +57,7 @@ export const projects: Project[] = [
   {
     id: 2,
     name: "CRM",
-    image: "/assets/crm.webp",
+    image: "/assets/projects/crm.jpg",
     frontend_tech: [
       { name: "HTML", image: "/assets/skills/html.png" },
       { name: "CSS", image: "/assets/skills/css.png" },
@@ -81,7 +81,7 @@ export const projects: Project[] = [
   {
     id: 3,
     name: "Coffee Shop",
-    image: "/assets/coffeeShop.webp",
+    image: "/assets/projects/coffeeShop.jpg",
     frontend_tech: [
       { name: "HTML", image: "/assets/skills/html.png" },
       { name: "CSS", image: "/assets/skills/css.png" },
@@ -105,7 +105,7 @@ export const projects: Project[] = [
   {
     id: 4,
     name: "Dental Care",
-    image: "/assets/DentalCare.webp",
+    image: "/assets/projects/DentalCare.jpg",
     frontend_tech: [
       { name: "HTML", image: "/assets/skills/html.png" },
       { name: "CSS", image: "/assets/skills/css.png" },
@@ -129,7 +129,7 @@ export const projects: Project[] = [
   {
     id: 5,
     name: "Workout Webapp",
-    image: "/assets/workout.webp",
+    image: "/assets/projects/workout.jpg",
     frontend_tech: [
       { name: "HTML", image: "/assets/skills/html.png" },
       { name: "CSS", image: "/assets/skills/css.png" },
@@ -150,7 +150,7 @@ export const projects: Project[] = [
   {
     id: 6,
     name: "Pokemon Webapp",
-    image: "/assets/pokemon.webp",
+    image: "/assets/projects/pokemon.jpg",
     frontend_tech: [
       { name: "HTML", image: "/assets/skills/html.png" },
       { name: "CSS", image: "/assets/skills/css.png" },
@@ -178,7 +178,7 @@ export const projects: Project[] = [
   {
     id: 7,
     name: "Rick and Morty",
-    image: "/assets/rickmorty_wp.webp",
+    image: "/assets/projects/rick&morty.jpg",
     frontend_tech: [
       { name: "HTML", image: "/assets/skills/html.png" },
       { name: "CSS", image: "/assets/skills/css.png" },
