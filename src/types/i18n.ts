@@ -37,6 +37,7 @@ export interface UiTranslations {
     copyErrorToast: string;
     linkedinAria: string;
     githubAria: string;
+    professionalProfile: string;
   };
   projects: {
     sectionLabel: string;

@@ -7,8 +7,10 @@ import Link from "next/link";
 import clipboard from "clipboard-copy";
 import toast from "react-hot-toast";
 import { motion, useReducedMotion } from "framer-motion";
-import { CONTACT_EMAIL, GITHUB_URL, LINKEDIN_URL } from "@/utils/constants";
+import { CONTACT_EMAIL } from "@/utils/constants";
 import SkillIcon from "./SkillIcon";
+import HeroImageCards from "./HeroImageCards";
+import ProfessionalProfile from "./ProfessionalProfile";
 import { useLanguage } from "@/app/language-provider";
 
 const DARK_ICONS = ["nextjs"];
@@ -47,7 +49,7 @@ const Hero = () => {
   return (
     <section
       aria-label={t.hero.sectionLabel}
-      className="w-full max-w-full overflow-x-hidden pt-[2em] pb-[4em] xsPhone:pb-6 phone:pb-6 laptop:pt-0 laptop:pb-0 phone:w-full phone:items-center laptop:items-start laptop:w-[1100px] tablet:w-[500px] h-auto tablet:mt-[30px] mx-[15px] scrollbar-hide flex phone:flex-col-reverse items-center gap-14 phone:gap-0 phone:justify-between laptop:flex-row laptop:justify-between justify-center"
+      className="w-full max-w-full overflow-visible pt-[2em] pb-[4em] xsPhone:pb-6 phone:pb-6 laptop:pt-0 laptop:pb-0 phone:w-full phone:items-center laptop:items-start laptop:w-[1100px] tablet:w-[500px] h-auto tablet:mt-[60px] mx-[15px] scrollbar-hide flex phone:flex-col-reverse items-center gap-14 phone:gap-0 phone:justify-between laptop:flex-row laptop:justify-between justify-center"
     >
       {/* Left */}
       <div className="ml-1 phone:w-full phone:max-w-[498px] xsPhone:w-full xsPhone:max-w-full h-auto xsPhone:gap-6 xsPhone:justify-center tablet:max-w-[550px] laptop:justify-between flex flex-col phone:justify-start laptop:gap-4 phone:gap-8">
@@ -116,7 +118,7 @@ const Hero = () => {
             }
             className="flex"
           >
-            <div className="flex tablet:gap-4 xsPhone:gap-2">
+            <div className="hidden tablet:flex tablet:gap-4">
               <p className="flex uppercase font-main-font xsPhone:text-[12px] phone:text-[16px] tablet:text-[20px] text-grey_text dark:text-dark_mode_text">
                 <span className="tablet:hidden">FRONT</span>
                 <span className="hidden tablet:inline">{t.hero.frontend}</span>
@@ -152,7 +154,7 @@ const Hero = () => {
             }
             className="flex"
           >
-            <div className="flex tablet:gap-4 xsPhone:gap-2">
+            <div className="hidden tablet:flex tablet:gap-4">
               <p className="flex uppercase font-main-font xsPhone:text-[12px] phone:text-[16px] tablet:text-[20px] text-grey_text dark:text-dark_mode_text">
                 <span className="tablet:hidden">BACK</span>
                 <span className="hidden tablet:inline">{t.hero.backend}</span>
@@ -191,7 +193,7 @@ const Hero = () => {
             }
             className="flex"
           >
-            <div className="flex tablet:gap-4 xsPhone:gap-2">
+            <div className="hidden tablet:flex tablet:gap-4">
               <p className="flex uppercase font-main-font xsPhone:text-[12px] phone:text-[16px] tablet:text-[20px] text-grey_text dark:text-dark_mode_text">
                 {t.hero.tools}
               </p>
@@ -207,7 +209,7 @@ const Hero = () => {
           </motion.div>
         </div>
         {/* Email and CV */}
-        <div className="flex flex-wrap items-center justify-start gap-3 tablet:gap-6 xsPhone:px-[15px] laptop:px-0 mb-4">
+        <div className="flex flex-wrap items-center justify-start gap-3 pb-2 tablet:gap-6 xsPhone:px-[15px] laptop:px-0">
           {/* CV */}
           <motion.div
             initial={shouldReduceMotion ? false : { x: -30, opacity: 0 }}
@@ -228,13 +230,13 @@ const Hero = () => {
               href="/assets/CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex ring-2 ring-[#53E767] w-[150px] items-center justify-center gap-1 rounded-lg cursor-pointer hover:bg-[#53E767] transition-colors"
+              className="flex w-auto items-center gap-3 rounded-2xl border border-black/10 bg-white/75 px-4 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:border-green_text/50 hover:bg-white dark:border-white/10 dark:bg-slate-900/80 dark:hover:border-green_text/50 dark:hover:bg-slate-900"
             >
               <FaFileAlt
                 aria-hidden="true"
-                className="w-5 h-5 text-center dark:text-dark_mode_text"
+                className="h-[18px] w-[18px] text-center text-grey_text dark:text-dark_mode_text"
               />
-              <p className="font-main-font whitespace-nowrap text-[14px] tablet:text-[16px] dark:text-dark_mode_text">
+              <p className="font-main-font whitespace-nowrap text-[15px] tracking-[0.12em] text-grey_text dark:text-dark_mode_text">
                 {t.hero.resume}
               </p>
             </Link>
@@ -261,13 +263,13 @@ const Hero = () => {
               aria-label={
                 isCopied ? t.hero.emailCopiedAria : t.hero.copyEmailAria
               }
-              className="flex px-1 items-center justify-start gap-1 rounded-lg cursor-pointer transition-colors bg-transparent shadow-none"
+              className="flex items-center gap-3 rounded-2xl border border-black/10 bg-white/75 px-4 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:border-green_text/50 hover:bg-white dark:border-white/10 dark:bg-slate-900/80 dark:hover:border-green_text/50 dark:hover:bg-slate-900"
             >
               <FaCopy
                 aria-hidden="true"
-                className="w-5 h-5 text-center dark:text-dark_mode_text hover:text-[#53E767] hover:dark:text-[#53E767]"
+                className="h-[18px] w-[18px] text-center text-grey_text dark:text-dark_mode_text"
               />
-              <span className="font-main-font whitespace-nowrap text-[14px] tablet:text-[16px] uppercase dark:text-dark_mode_text">
+              <span className="font-main-font whitespace-nowrap text-[15px] tracking-[0.12em] text-grey_text dark:text-dark_mode_text">
                 {isCopied ? t.hero.copied : t.hero.email}
               </span>
             </button>
@@ -290,9 +292,9 @@ const Hero = () => {
                 duration: 1,
               }
         }
-        className="phone:flex phone:h-auto phone:w-full phone:max-w-full tablet:w-[520px] xsPhone:hidden"
+        className="relative z-30 phone:flex phone:h-auto phone:w-full phone:max-w-full phone:overflow-visible tablet:w-[520px] xsPhone:hidden"
       >
-        <div className="relative w-full flex laptop:pt-10 justify-center">
+        <div className="relative z-30 w-full flex justify-center overflow-visible">
           <motion.div
             initial={shouldReduceMotion ? false : { x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -308,98 +310,9 @@ const Hero = () => {
                   }
             }
           >
-            <div className=" z-20 mb-10 laptop:h-[400px] flex">
-              {/* LinkedIn */}
-              <motion.div
-                initial={shouldReduceMotion ? false : { y: 100, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={
-                  shouldReduceMotion
-                    ? { duration: 0 }
-                    : {
-                        delay: 0.5,
-                        y: { type: "spring", stiffness: 60 },
-                        opacity: { duration: 1 },
-                        ease: "easeIn",
-                        duration: 1,
-                      }
-                }
-                className="justify-center self-end"
-              >
-                <Link
-                  className="h-full"
-                  target="_blank"
-                  href={LINKEDIN_URL}
-                  rel="noopener noreferrer"
-                  aria-label={t.hero.linkedinAria}
-                >
-                  <Image
-                    src="/assets/linkedin.svg"
-                    alt="LinkedIn"
-                    width={90}
-                    height={90}
-                    className="rounded-full laptop:w-[90px] laptop:h-[90px] phone:w-[44px] phone:h-[44px] cursor-pointer"
-                  />
-                </Link>
-              </motion.div>
-              {/* Image and Ellipse */}
-              <div className="relative">
-                <Image
-                  src="/assets/portrait.webp"
-                  alt="Portrait photo of Cristopher Areche"
-                  width={343}
-                  height={350}
-                  sizes="(min-width: 1440px) 343px, (min-width: 768px) 45vw, 175px"
-                  priority
-                  className=" z-10 object-cover ring-8 ring-gray-600 relative rounded-full dark:ring-green_text phone:w-[175px] phone:h-[175px] laptop:h-[350px] laptop:w-[343px] transition-transform transform hover:scale-110"
-                />
-                {/* Ellipse */}
-                <div
-                  aria-hidden="true"
-                  className="z-0 bg-grey_text dark:bg-green_text/75 rounded-full h-[350px] w-[343px] absolute top-[40px] left-[40px] hidden laptop:block"
-                >
-                  <svg
-                    width="342"
-                    height="345"
-                    viewBox="0 0 342 345"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <ellipse cx="171" cy="172.5" rx="171" ry="172.5" />
-                  </svg>
-                </div>
-              </div>
-              {/* Github */}
-              <motion.div
-                initial={shouldReduceMotion ? false : { y: -100, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={
-                  shouldReduceMotion
-                    ? { duration: 0 }
-                    : {
-                        delay: 0.5,
-                        y: { type: "spring", stiffness: 60 },
-                        opacity: { duration: 1 },
-                        ease: "easeIn",
-                        duration: 1,
-                      }
-                }
-              >
-                <Link
-                  target="_blank"
-                  href={GITHUB_URL}
-                  rel="noopener noreferrer"
-                  aria-label={t.hero.githubAria}
-                >
-                  <Image
-                    src="/assets/github.svg"
-                    alt="GitHub"
-                    width={90}
-                    height={90}
-                    className="rounded-full laptop:w-[90px] laptop:h-[90px] phone:w-[44px] phone:h-[44px] cursor-pointer"
-                  />
-                </Link>
-              </motion.div>
+            <div className="z-20 mb-10 flex flex-col items-center laptop:h-auto">
+              <HeroImageCards />
+              <ProfessionalProfile />
             </div>
           </motion.div>
         </div>
