@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { backEndSkills, frontEndSkills, tools } from "@/utils/data";
 import { FaFileAlt, FaCopy } from "react-icons/fa";
@@ -15,16 +15,29 @@ const DARK_ICONS = ["nextjs"];
 
 const Hero = () => {
   const [isCopied, setIsCopied] = useState(false);
+  const copyResetTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const shouldReduceMotion = useReducedMotion();
   const { t } = useLanguage();
+
+  useEffect(() => {
+    return () => {
+      if (copyResetTimerRef.current) {
+        clearTimeout(copyResetTimerRef.current);
+      }
+    };
+  }, []);
 
   const handleCopyClick = async () => {
     try {
       await clipboard(CONTACT_EMAIL);
       setIsCopied(true);
       toast.success(t.hero.copySuccessToast);
-      setTimeout(() => {
+      if (copyResetTimerRef.current) {
+        clearTimeout(copyResetTimerRef.current);
+      }
+      copyResetTimerRef.current = setTimeout(() => {
         setIsCopied(false);
+        copyResetTimerRef.current = null;
       }, 2000);
     } catch {
       toast.error(t.hero.copyErrorToast);
@@ -34,10 +47,10 @@ const Hero = () => {
   return (
     <section
       aria-label={t.hero.sectionLabel}
-      className="w-full max-w-full overflow-x-hidden pt-[2em] pb-[4em] xsPhone:pb-6 phone:pb-6 laptop:pt-0 laptop:pb-0 phone:w-full phone:items-center laptop:items-start laptop:w-[1100px] laptop:h-[550px] tablet:w-[500px] h-full tablet:mt-[140px] mx-[15px] scrollbar-hide flex phone:flex-col-reverse items-center gap-14 phone:h-auto phone:gap-0 phone:justify-between laptop:flex-row laptop:justify-between justify-center"
+      className="w-full max-w-full overflow-x-hidden pt-[2em] pb-[4em] xsPhone:pb-6 phone:pb-6 laptop:pt-0 laptop:pb-0 phone:w-full phone:items-center laptop:items-start laptop:w-[1100px] tablet:w-[500px] h-auto tablet:mt-[30px] mx-[15px] scrollbar-hide flex phone:flex-col-reverse items-center gap-14 phone:gap-0 phone:justify-between laptop:flex-row laptop:justify-between justify-center"
     >
       {/* Left */}
-      <div className="ml-1 phone:w-full phone:max-w-[498px] xsPhone:w-full xsPhone:max-w-full h-auto xsPhone:gap-6 xsPhone:justify-center tablet:max-w-[550px] laptop:max-h-[520px] laptop:justify-between flex flex-col phone:justify-start laptop:gap-4 phone:gap-8">
+      <div className="ml-1 phone:w-full phone:max-w-[498px] xsPhone:w-full xsPhone:max-w-full h-auto xsPhone:gap-6 xsPhone:justify-center tablet:max-w-[550px] laptop:justify-between flex flex-col phone:justify-start laptop:gap-4 phone:gap-8">
         {/* Header */}
         <motion.div
           initial={shouldReduceMotion ? false : { y: 20, opacity: 0 }}
@@ -112,7 +125,7 @@ const Hero = () => {
                 |
               </p>
             </div>
-            <div className="flex gap-[10px] items-center">
+            <ul className="flex flex-wrap gap-[10px] items-center">
               {frontEndSkills?.map((skill) => (
                 <SkillIcon
                   key={skill.id}
@@ -120,7 +133,7 @@ const Hero = () => {
                   image={skill.image}
                 />
               ))}
-            </div>
+            </ul>
           </motion.div>
           {/* backend */}
           <motion.div
@@ -148,7 +161,7 @@ const Hero = () => {
                 |
               </p>
             </div>
-            <div className="flex gap-[10px] items-center">
+            <ul className="flex flex-wrap gap-[10px] items-center">
               {backEndSkills?.map((skill) => (
                 <SkillIcon
                   key={skill.id}
@@ -159,7 +172,7 @@ const Hero = () => {
                   )}
                 />
               ))}
-            </div>
+            </ul>
           </motion.div>
           {/* tools */}
           <motion.div
@@ -186,15 +199,15 @@ const Hero = () => {
                 |
               </p>
             </div>
-            <div className="flex gap-[10px] items-center">
+            <ul className="flex flex-wrap gap-[10px] items-center">
               {tools?.map((tool) => (
                 <SkillIcon key={tool.id} name={tool.name} image={tool.image} />
               ))}
-            </div>
+            </ul>
           </motion.div>
         </div>
         {/* Email and CV */}
-        <div className="flex flex-wrap items-center justify-start gap-3 tablet:gap-6 xsPhone:px-[15px] laptop:px-0">
+        <div className="flex flex-wrap items-center justify-start gap-3 tablet:gap-6 xsPhone:px-[15px] laptop:px-0 mb-4">
           {/* CV */}
           <motion.div
             initial={shouldReduceMotion ? false : { x: -30, opacity: 0 }}
@@ -221,7 +234,7 @@ const Hero = () => {
                 aria-hidden="true"
                 className="w-5 h-5 text-center dark:text-dark_mode_text"
               />
-              <p className="font-main-font text-[16px] tablet:text-[20px] dark:text-dark_mode_text">
+              <p className="font-main-font whitespace-nowrap text-[14px] tablet:text-[16px] dark:text-dark_mode_text">
                 {t.hero.resume}
               </p>
             </Link>
@@ -254,7 +267,7 @@ const Hero = () => {
                 aria-hidden="true"
                 className="w-5 h-5 text-center dark:text-dark_mode_text hover:text-[#53E767] hover:dark:text-[#53E767]"
               />
-              <span className="font-main-font text-[16px] tablet:text-[20px] uppercase dark:text-dark_mode_text">
+              <span className="font-main-font whitespace-nowrap text-[14px] tablet:text-[16px] uppercase dark:text-dark_mode_text">
                 {isCopied ? t.hero.copied : t.hero.email}
               </span>
             </button>
@@ -277,7 +290,7 @@ const Hero = () => {
                 duration: 1,
               }
         }
-        className="phone:flex phone:h-full phone:w-full phone:max-w-full tablet:w-[520px] laptop:max-h-[520px] xsPhone:hidden"
+        className="phone:flex phone:h-auto phone:w-full phone:max-w-full tablet:w-[520px] xsPhone:hidden"
       >
         <div className="relative w-full flex laptop:pt-10 justify-center">
           <motion.div
@@ -325,7 +338,7 @@ const Hero = () => {
                     alt="LinkedIn"
                     width={90}
                     height={90}
-                    className="animate-pulse rounded-full laptop:w-[90px] laptop:h-[90px] phone:w-[44px] phone:h-[44px] cursor-pointer"
+                    className="rounded-full laptop:w-[90px] laptop:h-[90px] phone:w-[44px] phone:h-[44px] cursor-pointer"
                   />
                 </Link>
               </motion.div>
@@ -383,7 +396,7 @@ const Hero = () => {
                     alt="GitHub"
                     width={90}
                     height={90}
-                    className=" animate-pulse rounded-full laptop:w-[90px] laptop:h-[90px] phone:w-[44px] phone:h-[44px] cursor-pointer"
+                    className="rounded-full laptop:w-[90px] laptop:h-[90px] phone:w-[44px] phone:h-[44px] cursor-pointer"
                   />
                 </Link>
               </motion.div>

@@ -7,7 +7,8 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide;
+    @apply bg-light_bg text-grey_text antialiased tracking-normal leading-relaxed;
+    text-rendering: optimizeLegibility;
   }
   h1,
   h2,
@@ -15,7 +16,7 @@
   h4,
   h5,
   h6 {
-    @apply font-bold;
+    @apply font-bold tracking-tight leading-tight;
   }
   h1 {
     @apply text-4xl sm:text-5xl md:text-6xl;
@@ -25,6 +26,9 @@
   }
   li {
     @apply cursor-pointer;
+  }
+  ::selection {
+    @apply bg-green_text/20 text-grey_text;
   }
 }
 
@@ -43,5 +47,5 @@
 
 /* Primary button style (opt-in instead of global button override) */
 .btn-primary {
-  @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#53E767] to-[#3fce52] text-white;
+  @apply shadow-xl shadow-slate-300/60 dark:shadow-black/20 rounded-xl uppercase bg-gradient-to-r from-green_text to-emerald-500 text-white;
 }
