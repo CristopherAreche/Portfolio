@@ -32,6 +32,30 @@ export const tools: Tool[] = [
 export const projects: Project[] = [
   {
     id: 1,
+    name: "WON - Workout AI Planner",
+    image: "/assets/won.webp",
+    frontend_tech: [
+      { name: "TypeScript", image: "/assets/skills/typescript.png" },
+      { name: "React", image: "/assets/skills/react.png" },
+      { name: "Next Js", image: "/assets/skills/nextjs.png" },
+      { name: "Tailwind", image: "/assets/skills/tailwind.png" },
+      { name: "Vercel", image: "/assets/skills/vercel.svg" },
+    ],
+    backend_tech: [
+      { name: "Node", image: "/assets/skills/node.png" },
+      { name: "Prisma", image: "/assets/skills/prisma.png" },
+      { name: "Supabase", image: "/assets/skills/supabase.png" },
+      { name: "PostgreSQL", image: "/assets/skills/postgresql.svg" },
+    ],
+    description:
+      "WON turns a quick onboarding into a training plan that actually fits your life. Pick your goal (fat loss, muscle, endurance), set your schedule and where you train (home or gym), and WON generates clear, ready-to-start workouts.",
+    descriptionEs:
+      "WON convierte un onboarding rápido en un plan de entrenamiento que se adapta a tu vida. Elige tu objetivo, define horarios y lugar de entrenamiento (casa o gimnasio), y genera rutinas claras listas para empezar.",
+    deployment: { status: "in-progress" },
+    sourceCode: "https://github.com/CristopherAreche/WON",
+  },
+  {
+    id: 2,
     name: "CRM",
     image: "/assets/crm.webp",
     frontend_tech: [
@@ -55,7 +79,31 @@ export const projects: Project[] = [
     sourceCode: "https://github.com/CristopherAreche/CRM",
   },
   {
-    id: 2,
+    id: 3,
+    name: "Coffee Shop",
+    image: "/assets/coffeeShop.webp",
+    frontend_tech: [
+      { name: "HTML", image: "/assets/skills/html.png" },
+      { name: "CSS", image: "/assets/skills/css.png" },
+      { name: "JavaScript", image: "/assets/skills/javascript.png" },
+      { name: "React", image: "/assets/skills/react.png" },
+      { name: "Redux-Toolkit", image: "/assets/skills/redux.svg" },
+      { name: "Tailwind", image: "/assets/skills/tailwind.png" },
+    ],
+    backend_tech: [
+      { name: "Node", image: "/assets/skills/node.png" },
+      { name: "Sequelize", image: "/assets/skills/sequelize.svg" },
+      { name: "PostgreSQL", image: "/assets/skills/postgresql.svg" },
+    ],
+    description:
+      "An online hub for coffee enthusiasts, this website allows users to effortlessly explore and order diverse coffee blends. The user-friendly interface ensures a seamless experience, while a convenient order history feature lets users track and replicate their favorite coffee choices. Elevate your coffee experience with this stylish and user-centric web solution.",
+    descriptionEs:
+      "Un espacio online para amantes del café donde los usuarios pueden explorar y pedir distintas mezclas. Su interfaz simple ofrece una experiencia fluida, con historial de pedidos para repetir cafés favoritos.",
+    deployment: { status: "in-progress" },
+    sourceCode: "https://github.com/CristopherAreche/business-box",
+  },
+  {
+    id: 4,
     name: "Dental Care",
     image: "/assets/DentalCare.webp",
     frontend_tech: [
@@ -79,7 +127,28 @@ export const projects: Project[] = [
     sourceCode: "https://github.com/CristopherAreche/DentalCare",
   },
   {
-    id: 3,
+    id: 5,
+    name: "Workout Webapp",
+    image: "/assets/workout.webp",
+    frontend_tech: [
+      { name: "HTML", image: "/assets/skills/html.png" },
+      { name: "CSS", image: "/assets/skills/css.png" },
+      { name: "JavaScript", image: "/assets/skills/javascript.png" },
+      { name: "React", image: "/assets/skills/react.png" },
+      { name: "Tailwind", image: "/assets/skills/tailwind.png" },
+    ],
+    description:
+      "Welcome to my Fitness Webapp, your go-to destination for targeted workouts based on specific body regions. This user-friendly website offers a curated collection of exercises designed to tone and strengthen different parts of your body",
+    descriptionEs:
+      "Bienvenido a mi Fitness Webapp, tu espacio para encontrar rutinas enfocadas por zona corporal. Incluye una colección de ejercicios pensada para tonificar y fortalecer distintas partes del cuerpo.",
+    deployment: {
+      status: "live",
+      url: "https://fitness-website-ashy-nine.vercel.app/",
+    },
+    sourceCode: "https://github.com/CristopherAreche/Fitness-Website",
+  },
+  {
+    id: 6,
     name: "Pokemon Webapp",
     image: "/assets/pokemon.webp",
     frontend_tech: [
@@ -107,28 +176,7 @@ export const projects: Project[] = [
     sourceCode: "https://github.com/CristopherAreche/Pokemon",
   },
   {
-    id: 4,
-    name: "Workout Webapp",
-    image: "/assets/workout.webp",
-    frontend_tech: [
-      { name: "HTML", image: "/assets/skills/html.png" },
-      { name: "CSS", image: "/assets/skills/css.png" },
-      { name: "JavaScript", image: "/assets/skills/javascript.png" },
-      { name: "React", image: "/assets/skills/react.png" },
-      { name: "Tailwind", image: "/assets/skills/tailwind.png" },
-    ],
-    description:
-      "Welcome to my Fitness Webapp, your go-to destination for targeted workouts based on specific body regions. This user-friendly website offers a curated collection of exercises designed to tone and strengthen different parts of your body",
-    descriptionEs:
-      "Bienvenido a mi Fitness Webapp, tu espacio para encontrar rutinas enfocadas por zona corporal. Incluye una colección de ejercicios pensada para tonificar y fortalecer distintas partes del cuerpo.",
-    deployment: {
-      status: "live",
-      url: "https://fitness-website-ashy-nine.vercel.app/",
-    },
-    sourceCode: "https://github.com/CristopherAreche/Fitness-Website",
-  },
-  {
-    id: 5,
+    id: 7,
     name: "Rick and Morty",
     image: "/assets/rickmorty_wp.webp",
     frontend_tech: [
@@ -147,53 +195,5 @@ export const projects: Project[] = [
       url: "https://cristopherareche.github.io/rick_and_morty_website/",
     },
     sourceCode: "https://github.com/CristopherAreche/rick_and_morty_website",
-  },
-  {
-    id: 6,
-    name: "Coffee Shop",
-    image: "/assets/coffeeShop.webp",
-    frontend_tech: [
-      { name: "HTML", image: "/assets/skills/html.png" },
-      { name: "CSS", image: "/assets/skills/css.png" },
-      { name: "JavaScript", image: "/assets/skills/javascript.png" },
-      { name: "React", image: "/assets/skills/react.png" },
-      { name: "Redux-Toolkit", image: "/assets/skills/redux.svg" },
-      { name: "Tailwind", image: "/assets/skills/tailwind.png" },
-    ],
-    backend_tech: [
-      { name: "Node", image: "/assets/skills/node.png" },
-      { name: "Sequelize", image: "/assets/skills/sequelize.svg" },
-      { name: "PostgreSQL", image: "/assets/skills/postgresql.svg" },
-    ],
-    description:
-      "An online hub for coffee enthusiasts, this website allows users to effortlessly explore and order diverse coffee blends. The user-friendly interface ensures a seamless experience, while a convenient order history feature lets users track and replicate their favorite coffee choices. Elevate your coffee experience with this stylish and user-centric web solution.",
-    descriptionEs:
-      "Un espacio online para amantes del café donde los usuarios pueden explorar y pedir distintas mezclas. Su interfaz simple ofrece una experiencia fluida, con historial de pedidos para repetir cafés favoritos.",
-    deployment: { status: "in-progress" },
-    sourceCode: "https://github.com/CristopherAreche/business-box",
-  },
-  {
-    id: 7,
-    name: "WON - Workout AI Planner",
-    image: "/assets/won.webp",
-    frontend_tech: [
-      { name: "TypeScript", image: "/assets/skills/typescript.png" },
-      { name: "React", image: "/assets/skills/react.png" },
-      { name: "Next Js", image: "/assets/skills/nextjs.png" },
-      { name: "Tailwind", image: "/assets/skills/tailwind.png" },
-      { name: "Vercel", image: "/assets/skills/vercel.svg" },
-    ],
-    backend_tech: [
-      { name: "Node", image: "/assets/skills/node.png" },
-      { name: "Prisma", image: "/assets/skills/prisma.png" },
-      { name: "Supabase", image: "/assets/skills/supabase.png" },
-      { name: "PostgreSQL", image: "/assets/skills/postgresql.svg" },
-    ],
-    description:
-      "WON turns a quick onboarding into a training plan that actually fits your life. Pick your goal (fat loss, muscle, endurance), set your schedule and where you train (home or gym), and WON generates clear, ready-to-start workouts.",
-    descriptionEs:
-      "WON convierte un onboarding rápido en un plan de entrenamiento que se adapta a tu vida. Elige tu objetivo, define horarios y lugar de entrenamiento (casa o gimnasio), y genera rutinas claras listas para empezar.",
-    deployment: { status: "in-progress" },
-    sourceCode: "https://github.com/CristopherAreche/WON",
   },
 ];

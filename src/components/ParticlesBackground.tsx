@@ -8,19 +8,13 @@ import { useReducedMotion } from "framer-motion";
 
 const ParticlesBackground = () => {
   const [init, setInit] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
   const { resolvedTheme } = useTheme();
   const shouldReduceMotion = useReducedMotion();
 
   useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
-    }).then(() => setInit(true));
-  }, []);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
-    const updateViewport = () => setIsMobile(mediaQuery.matches);
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
+    const updateViewport = () => setIsDesktop(mediaQuery.matches);
 
     updateViewport();
     mediaQuery.addEventListener("change", updateViewport);
@@ -28,24 +22,44 @@ const ParticlesBackground = () => {
     return () => mediaQuery.removeEventListener("change", updateViewport);
   }, []);
 
+  useEffect(() => {
+    if (shouldReduceMotion || !isDesktop) {
+      return;
+    }
+
+    let isCancelled = false;
+
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => {
+      if (!isCancelled) {
+        setInit(true);
+      }
+    });
+
+    return () => {
+      isCancelled = true;
+    };
+  }, [isDesktop, shouldReduceMotion]);
+
   const getOptions = useCallback((): ISourceOptions => {
     const isDark = resolvedTheme === "dark";
 
     return {
       background: { color: { value: "transparent" } },
-      fpsLimit: isMobile ? 40 : 60,
+      fpsLimit: 50,
       particles: {
         color: { value: isDark ? "#f8f8f8ff" : "#000000ff" },
         move: {
           enable: true,
-          speed: isMobile ? 0.35 : 0.6,
+          speed: 0.45,
           direction: "none" as const,
           random: true,
           straight: false,
           outModes: { default: "out" as const },
         },
         number: {
-          value: isMobile ? 45 : 90,
+          value: 60,
           density: { enable: true, width: 1920, height: 1080 },
         },
         opacity: {
@@ -65,13 +79,13 @@ const ParticlesBackground = () => {
       },
       detectRetina: true,
     };
-  }, [resolvedTheme, isMobile]);
+  }, [resolvedTheme]);
 
-  if (!init || shouldReduceMotion) return null;
+  if (!init || shouldReduceMotion || !isDesktop) return null;
 
   return (
     <Particles
-      key={`${resolvedTheme}-${isMobile}`}
+      key={resolvedTheme}
       id="tsparticles"
       options={getOptions()}
       className="fixed inset-0 z-0 pointer-events-none"

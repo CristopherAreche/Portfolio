@@ -1,7 +1,17 @@
 import { TranslationDictionary } from "@/types/i18n";
+import { LanguageCode } from "@/types";
 
 export const uiTranslations: TranslationDictionary = {
   en: {
+    metadata: {
+      siteTitle: "Cristopher Areche | Software Engineer",
+      siteDescription:
+        "Software Engineer specializing in building scalable web applications with React, Next.js, Node.js, and PostgreSQL. Explore my portfolio of full-stack projects.",
+      projectsTitle: "Projects",
+      projectsDescription:
+        "Explore my portfolio of full-stack web development projects built with React, Next.js, Node.js, and PostgreSQL.",
+      jobTitle: "Software Engineer",
+    },
     layout: {
       skipToContent: "Skip to main content",
     },
@@ -55,6 +65,15 @@ export const uiTranslations: TranslationDictionary = {
     },
   },
   es: {
+    metadata: {
+      siteTitle: "Cristopher Areche | Ingeniero de Software",
+      siteDescription:
+        "Ingeniero de software especializado en aplicaciones web escalables con React, Next.js, Node.js y PostgreSQL. Explora mi portafolio de proyectos full-stack.",
+      projectsTitle: "Proyectos",
+      projectsDescription:
+        "Explora mi portafolio de proyectos full-stack creados con React, Next.js, Node.js y PostgreSQL.",
+      jobTitle: "Ingeniero de Software",
+    },
     layout: {
       skipToContent: "Saltar al contenido principal",
     },
@@ -109,3 +128,7 @@ export const uiTranslations: TranslationDictionary = {
     },
   },
 };
+
+export function getTranslations(language: LanguageCode) {
+  return uiTranslations[language];
+}

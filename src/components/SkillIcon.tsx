@@ -7,6 +7,7 @@ interface SkillIconProps {
   image: string;
   size?: number;
   needsDarkBg?: boolean;
+  darkBgVariant?: "circle" | "soft";
 }
 
 const SkillIcon = ({
@@ -14,6 +15,7 @@ const SkillIcon = ({
   image,
   size = 30,
   needsDarkBg = false,
+  darkBgVariant = "circle",
 }: SkillIconProps) => {
   const [showName, setShowName] = useState(false);
   const hideTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -31,12 +33,15 @@ const SkillIcon = ({
     };
   }, []);
 
+  const darkBackgroundClass = needsDarkBg
+    ? darkBgVariant === "soft"
+      ? "dark:bg-white dark:rounded-md dark:px-[4px] dark:py-[2px] flex items-center justify-center"
+      : "dark:bg-white dark:rounded-full dark:p-[2px] flex items-center justify-center"
+    : "";
+
   return (
-    <button
-      type="button"
-      className="relative flex items-center justify-center rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green_text"
-      aria-label={name}
-      aria-pressed={showName}
+    <li
+      className="relative flex items-center justify-center"
       onMouseEnter={() => {
         clearHideTimer();
         setShowName(true);
@@ -61,31 +66,33 @@ const SkillIcon = ({
 
         hideTimerRef.current = setTimeout(() => {
           setShowName(false);
-          hideTimerRef.current = null;
-        }, 1400);
+        hideTimerRef.current = null;
+      }, 1400);
       }}
     >
+      <span className="sr-only">{name}</span>
       {showName && (
-        <span className="absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-grey_text dark:bg-gray-700 text-white text-[11px] px-2 py-0.5 rounded font-main-font z-10 pointer-events-none">
+        <span
+          role="tooltip"
+          className="absolute -top-8 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded bg-grey_text px-2 py-0.5 font-main-font text-[11px] text-white pointer-events-none dark:bg-gray-700"
+        >
           {name}
         </span>
       )}
-      <div
-        className={
-          needsDarkBg
-            ? "dark:bg-white dark:rounded-full dark:p-[2px] flex items-center justify-center"
-            : ""
-        }
+      <span
+        title={name}
+        className={darkBackgroundClass}
       >
         <Image
           src={image}
-          alt={name}
+          alt=""
+          aria-hidden="true"
           width={size}
           height={size}
           className="phone:h-[28px] transition-transform transform hover:scale-125"
         />
-      </div>
-    </button>
+      </span>
+    </li>
   );
 };
 

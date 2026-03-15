@@ -19,12 +19,12 @@ module.exports = {
         "main-font": ["var(--font-main)", "sans-serif"],
       },
       colors: {
-        dark_mode_text: "#ecf0f3",
-        green_text: "#53E766",
-        grey_text: "#374151",
-        dark_bg: "#000",
-        light_text: "#ECF0F3",
-        light_bg: "#ECF0F3",
+        dark_mode_text: "#e5eef8",
+        green_text: "#16a34a",
+        grey_text: "#0f172a",
+        dark_bg: "#020617",
+        light_text: "#f8fafc",
+        light_bg: "#f8fafc",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

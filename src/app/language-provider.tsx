@@ -1,46 +1,29 @@
 "use client";
 
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from "react";
+import { createContext, useContext, useMemo } from "react";
 import { LanguageCode } from "@/types";
-import { uiTranslations } from "@/utils/i18n";
-
-const LANGUAGE_STORAGE_KEY = "portfolio.lang.v1";
+import { getTranslations } from "@/utils/i18n";
 
 interface LanguageContextValue {
   language: LanguageCode;
-  setLanguage: (value: LanguageCode) => void;
+  t: ReturnType<typeof getTranslations>;
 }
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguageState] = useState<LanguageCode>("en");
-
-  useEffect(() => {
-    const storedLanguage = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
-    if (storedLanguage === "en" || storedLanguage === "es") {
-      setLanguageState(storedLanguage);
-    }
-  }, []);
-
-  const setLanguage = useCallback((value: LanguageCode) => {
-    setLanguageState(value);
-    window.localStorage.setItem(LANGUAGE_STORAGE_KEY, value);
-  }, []);
-
+export function LanguageProvider({
+  children,
+  language,
+}: {
+  children: React.ReactNode;
+  language: LanguageCode;
+}) {
   const value = useMemo(
     () => ({
       language,
-      setLanguage,
+      t: getTranslations(language),
     }),
-    [language, setLanguage]
+    [language]
   );
 
   return (
@@ -56,8 +39,5 @@ export function useLanguage() {
     throw new Error("useLanguage must be used within LanguageProvider");
   }
 
-  return {
-    ...context,
-    t: uiTranslations[context.language],
-  };
+  return context;
 }

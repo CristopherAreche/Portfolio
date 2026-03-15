@@ -1,6 +1,13 @@
 import { LanguageCode } from "@/types";
 
 export interface UiTranslations {
+  metadata: {
+    siteTitle: string;
+    siteDescription: string;
+    projectsTitle: string;
+    projectsDescription: string;
+    jobTitle: string;
+  };
   layout: {
     skipToContent: string;
   };
