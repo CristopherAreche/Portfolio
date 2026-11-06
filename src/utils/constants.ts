@@ -1,4 +1,4 @@
-export const CONTACT_EMAIL = "cristopherareche764@gmail.com";
+export const CONTACT_EMAIL = "cristopherarecheguillen04@gmail.com";
 export const GITHUB_URL =
   "https://github.com/CristopherAreche?tab=repositories";
 export const LINKEDIN_URL =

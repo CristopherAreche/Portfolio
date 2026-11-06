@@ -38,6 +38,8 @@ export interface Project {
   backend_tech?: TechItem[];
   description: string;
   descriptionEs: string;
+  contributions: string[];
+  contributionsEs: string[];
   deployment: ProjectDeployment;
   sourceCode: ExternalUrl;
 }
