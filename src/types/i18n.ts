@@ -23,12 +23,15 @@ export interface UiTranslations {
     sectionLabel: string;
     greeting: string;
     role: string;
+    specialty: string;
     descriptionFirst: string;
     descriptionSecond: string;
     frontend: string;
     backend: string;
     tools: string;
     resume: string;
+    viewWork: string;
+    contact: string;
     email: string;
     copied: string;
     copyEmailAria: string;
@@ -42,6 +45,11 @@ export interface UiTranslations {
   projects: {
     sectionLabel: string;
     heading: string;
+    introduction: string;
+    contribution: string;
+    stack: string;
+    independent: string;
+    previewAria: (name: string) => string;
     projectAria: (name: string) => string;
     sourceCode: string;
     sourceCodeAria: (name: string) => string;

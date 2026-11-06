@@ -6,7 +6,7 @@ export const uiTranslations: TranslationDictionary = {
     metadata: {
       siteTitle: "Cristopher Areche | Software Engineer",
       siteDescription:
-        "Software Engineer specializing in building scalable web applications with React, Next.js, Node.js, and PostgreSQL. Explore my portfolio of full-stack projects.",
+        "Software Engineer with 4+ years of experience across banking and healthcare. React, React Native, TypeScript, and design systems.",
       projectsTitle: "Projects",
       projectsDescription:
         "Explore my portfolio of full-stack web development projects built with React, Next.js, Node.js, and PostgreSQL.",
@@ -16,7 +16,7 @@ export const uiTranslations: TranslationDictionary = {
       skipToContent: "Skip to main content",
     },
     navbar: {
-      index: "Index",
+      index: "Home",
       projects: "Projects",
       languageLabel: "Language selector",
       languageToggleLabel: "Toggle language",
@@ -25,17 +25,20 @@ export const uiTranslations: TranslationDictionary = {
     },
     hero: {
       sectionLabel: "About me",
-      greeting: "Hi, I'M",
-      role: "A Software Engineer",
+      greeting: "Hi, I’m",
+      role: "Software Engineer",
+      specialty: "React · React Native · TypeScript · Design systems",
       descriptionFirst:
-        "driven by the desire to bring ideas to life on the internet. Over time, I've expanded my expertise to designing and building scalable applications, always aiming to create solutions that are both reliable and intuitive.",
+        "I build web and mobile applications with 4+ years of experience across banking and healthcare.",
       descriptionSecond:
-        "I enjoy the challenge of combining clean architecture, performance, and user-focused design to deliver meaningful digital experiences.",
-      frontend: "Front-end",
-      backend: "Back-end",
+        "I build reusable interfaces, connect them to APIs and databases, and use design systems to keep web and mobile experiences consistent and maintainable.",
+      frontend: "Frontend & mobile",
+      backend: "Backend & data",
       tools: "Tools",
-      resume: "RESUME / CV",
-      email: "Email",
+      resume: "Resume / CV",
+      viewWork: "View work",
+      contact: "Contact",
+      email: "Copy email",
       copied: "Copied!",
       copyEmailAria: "Copy email to clipboard",
       emailCopiedAria: "Email copied",
@@ -47,13 +50,19 @@ export const uiTranslations: TranslationDictionary = {
     },
     projects: {
       sectionLabel: "Projects",
-      heading: "My Projects",
+      heading: "Selected work",
+      introduction:
+        "Personal projects I designed and built independently, from responsive interfaces to full-stack applications.",
+      contribution: "What I built",
+      stack: "Technologies",
+      independent: "Independent project",
+      previewAria: (name: string) => `Preview of ${name}`,
       projectAria: (name: string) => `Project: ${name}`,
-      sourceCode: "Source Code",
+      sourceCode: "Source code",
       sourceCodeAria: (name: string) => `View ${name} source code on GitHub`,
-      visitWebsite: "visit website",
+      visitWebsite: "Open demo",
       visitWebsiteAria: (name: string) => `Visit ${name} live website`,
-      inProgress: "in progress",
+      inProgress: "In development",
     },
     errorBoundary: {
       title: "Something went wrong",
@@ -69,7 +78,7 @@ export const uiTranslations: TranslationDictionary = {
     metadata: {
       siteTitle: "Cristopher Areche | Ingeniero de Software",
       siteDescription:
-        "Ingeniero de software especializado en aplicaciones web escalables con React, Next.js, Node.js y PostgreSQL. Explora mi portafolio de proyectos full-stack.",
+        "Ingeniero de software con más de 4 años de experiencia en banca y salud. React, React Native, TypeScript y sistemas de diseño.",
       projectsTitle: "Proyectos",
       projectsDescription:
         "Explora mi portafolio de proyectos full-stack creados con React, Next.js, Node.js y PostgreSQL.",
@@ -88,17 +97,20 @@ export const uiTranslations: TranslationDictionary = {
     },
     hero: {
       sectionLabel: "Sobre mí",
-      greeting: "Hola, SOY",
+      greeting: "Hola, soy",
       role: "Ingeniero de Software",
+      specialty: "React · React Native · TypeScript · Sistemas de diseño",
       descriptionFirst:
-        "motivado por convertir ideas en productos reales en internet. Con el tiempo, amplié mi experiencia diseñando y construyendo aplicaciones escalables, siempre buscando soluciones confiables e intuitivas.",
+        "Desarrollo aplicaciones web y móviles con más de 4 años de experiencia en banca y salud.",
       descriptionSecond:
-        "Disfruto combinar arquitectura limpia, rendimiento y diseño centrado en el usuario para crear experiencias digitales con impacto.",
-      frontend: "Front-end",
-      backend: "Back-end",
+        "Creo interfaces reutilizables, las conecto con APIs y bases de datos, y uso sistemas de diseño para mantener experiencias web y móviles consistentes y fáciles de mantener.",
+      frontend: "Frontend y móvil",
+      backend: "Backend y datos",
       tools: "Herramientas",
-      resume: "CV / RESUMEN",
-      email: "Correo",
+      resume: "Ver CV",
+      viewWork: "Ver proyectos",
+      contact: "Contactar",
+      email: "Copiar correo",
       copied: "¡Copiado!",
       copyEmailAria: "Copiar correo al portapapeles",
       emailCopiedAria: "Correo copiado",
@@ -110,14 +122,20 @@ export const uiTranslations: TranslationDictionary = {
     },
     projects: {
       sectionLabel: "Proyectos",
-      heading: "Mis Proyectos",
+      heading: "Proyectos seleccionados",
+      introduction:
+        "Proyectos personales que diseñé y desarrollé de forma independiente, desde interfaces adaptables hasta aplicaciones full stack.",
+      contribution: "Lo que desarrollé",
+      stack: "Tecnologías",
+      independent: "Proyecto independiente",
+      previewAria: (name: string) => `Vista previa de ${name}`,
       projectAria: (name: string) => `Proyecto: ${name}`,
       sourceCode: "Código",
       sourceCodeAria: (name: string) =>
         `Ver el código fuente de ${name} en GitHub`,
-      visitWebsite: "visitar sitio",
+      visitWebsite: "Abrir demo",
       visitWebsiteAria: (name: string) => `Visitar sitio en vivo de ${name}`,
-      inProgress: "en progreso",
+      inProgress: "En desarrollo",
     },
     errorBoundary: {
       title: "Algo salió mal",

@@ -111,7 +111,11 @@
   z-index: 2;
   opacity: 0.95;
   filter: saturate(0.9);
-  transform: translate3d(var(--hero-card-offset), var(--hero-card-depth), -120px)
+  transform: translate3d(
+      var(--hero-card-offset),
+      var(--hero-card-depth),
+      -120px
+    )
     rotate(var(--hero-card-rotation)) scale(0.94);
 }
 
@@ -132,4 +136,29 @@
   opacity: 0;
   pointer-events: none;
   transform: translate3d(0, 28px, -180px) rotate(0deg) scale(0.82);
+}
+
+/* Keep the supporting portrait deck within its column at every breakpoint. */
+.portfolio-hero .hero-card-stack {
+  --hero-card-width: 176px;
+  --hero-card-height: 260px;
+  --hero-card-offset: 38px;
+  --hero-card-depth: 14px;
+}
+
+@media (min-width: 1024px) {
+  .portfolio-hero .hero-card-stack {
+    --hero-card-width: 220px;
+    --hero-card-height: 326px;
+    --hero-card-offset: 46px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .hero-card-stack__card {
+    transition: none;
+  }
 }

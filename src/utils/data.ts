@@ -37,20 +37,28 @@ export const projects: Project[] = [
     frontend_tech: [
       { name: "TypeScript", image: "/assets/skills/typescript.png" },
       { name: "React", image: "/assets/skills/react.png" },
-      { name: "Next Js", image: "/assets/skills/nextjs.png" },
+      { name: "Next.js", image: "/assets/skills/nextjs.png" },
       { name: "Tailwind", image: "/assets/skills/tailwind.png" },
       { name: "Vercel", image: "/assets/skills/vercel.svg" },
     ],
     backend_tech: [
-      { name: "Node", image: "/assets/skills/node.png" },
+      { name: "Node.js", image: "/assets/skills/node.png" },
       { name: "Prisma", image: "/assets/skills/prisma.png" },
       { name: "Supabase", image: "/assets/skills/supabase.png" },
       { name: "PostgreSQL", image: "/assets/skills/postgresql.svg" },
     ],
     description:
-      "WON turns a quick onboarding into a training plan that actually fits your life. Pick your goal (fat loss, muscle, endurance), set your schedule and where you train (home or gym), and WON generates clear, ready-to-start workouts.",
+      "A fitness application that turns training preferences into AI-generated workout plans.",
     descriptionEs:
-      "WON convierte un onboarding rápido en un plan de entrenamiento que se adapta a tu vida. Elige tu objetivo, define horarios y lugar de entrenamiento (casa o gimnasio), y genera rutinas claras listas para empezar.",
+      "Aplicación de fitness que convierte las preferencias de entrenamiento en planes generados con IA.",
+    contributions: [
+      "Built the onboarding flow for goals, experience, equipment, and training availability.",
+      "Connected onboarding data to AI plan generation and presented the resulting workout sessions.",
+    ],
+    contributionsEs: [
+      "Desarrollé el flujo inicial para definir objetivos, experiencia, equipo y disponibilidad.",
+      "Conecté esos datos con la generación de planes con IA y la presentación de las sesiones.",
+    ],
     deployment: { status: "in-progress" },
     sourceCode: "https://github.com/CristopherAreche/WON",
   },
@@ -63,19 +71,30 @@ export const projects: Project[] = [
       { name: "CSS", image: "/assets/skills/css.png" },
       { name: "JavaScript", image: "/assets/skills/javascript.png" },
       { name: "React", image: "/assets/skills/react.png" },
-      { name: "Redux-Toolkit", image: "/assets/skills/redux.svg" },
+      { name: "Redux Toolkit", image: "/assets/skills/redux.svg" },
       { name: "Tailwind", image: "/assets/skills/tailwind.png" },
     ],
     backend_tech: [
-      { name: "Node", image: "/assets/skills/node.png" },
+      { name: "Node.js", image: "/assets/skills/node.png" },
       { name: "Sequelize", image: "/assets/skills/sequelize.svg" },
       { name: "PostgreSQL", image: "/assets/skills/postgresql.svg" },
     ],
     description:
-      "Elevate your business management with this amazing CRM project, the all-in-one solution for sales, profiles, inventory, purchases, and VIP customer engagement. Streamline your operations and take control of your business success effortlessly.",
+      "A full-stack CRM for managing customer relationships and day-to-day business operations.",
     descriptionEs:
-      "Potencia la gestión de tu negocio con este CRM todo en uno para ventas, perfiles, inventario, compras y fidelización de clientes VIP. Optimiza tu operación y toma control del crecimiento de forma simple.",
-    deployment: { status: "live", url: "https://crm-client-rose-six.vercel.app/" },
+      "CRM full stack para gestionar relaciones con clientes y operaciones del negocio.",
+    contributions: [
+      "Built React interfaces for sales, customer profiles, inventory, and purchases.",
+      "Developed the Node.js backend and PostgreSQL data layer using Sequelize.",
+    ],
+    contributionsEs: [
+      "Desarrollé interfaces en React para ventas, perfiles de clientes, inventario y compras.",
+      "Implementé el backend en Node.js y la capa de datos en PostgreSQL con Sequelize.",
+    ],
+    deployment: {
+      status: "live",
+      url: "https://crm-client-rose-six.vercel.app/",
+    },
     sourceCode: "https://github.com/CristopherAreche/CRM",
   },
   {
@@ -87,18 +106,26 @@ export const projects: Project[] = [
       { name: "CSS", image: "/assets/skills/css.png" },
       { name: "JavaScript", image: "/assets/skills/javascript.png" },
       { name: "React", image: "/assets/skills/react.png" },
-      { name: "Redux-Toolkit", image: "/assets/skills/redux.svg" },
+      { name: "Redux Toolkit", image: "/assets/skills/redux.svg" },
       { name: "Tailwind", image: "/assets/skills/tailwind.png" },
     ],
     backend_tech: [
-      { name: "Node", image: "/assets/skills/node.png" },
+      { name: "Node.js", image: "/assets/skills/node.png" },
       { name: "Sequelize", image: "/assets/skills/sequelize.svg" },
       { name: "PostgreSQL", image: "/assets/skills/postgresql.svg" },
     ],
     description:
-      "An online hub for coffee enthusiasts, this website allows users to effortlessly explore and order diverse coffee blends. The user-friendly interface ensures a seamless experience, while a convenient order history feature lets users track and replicate their favorite coffee choices. Elevate your coffee experience with this stylish and user-centric web solution.",
+      "A coffee ordering application with product browsing and order history.",
     descriptionEs:
-      "Un espacio online para amantes del café donde los usuarios pueden explorar y pedir distintas mezclas. Su interfaz simple ofrece una experiencia fluida, con historial de pedidos para repetir cafés favoritos.",
+      "Aplicación de pedidos de café con catálogo e historial de compras.",
+    contributions: [
+      "Built the product browsing and ordering interfaces with React and Redux Toolkit.",
+      "Developed a Node.js and PostgreSQL backend for orders and purchase history.",
+    ],
+    contributionsEs: [
+      "Desarrollé las interfaces de catálogo y pedidos con React y Redux Toolkit.",
+      "Implementé el backend con Node.js y PostgreSQL para pedidos e historial de compras.",
+    ],
     deployment: { status: "in-progress" },
     sourceCode: "https://github.com/CristopherAreche/business-box",
   },
@@ -111,18 +138,26 @@ export const projects: Project[] = [
       { name: "CSS", image: "/assets/skills/css.png" },
       { name: "JavaScript", image: "/assets/skills/javascript.png" },
       { name: "React", image: "/assets/skills/react.png" },
-      { name: "Redux-Toolkit", image: "/assets/skills/redux.svg" },
+      { name: "Redux Toolkit", image: "/assets/skills/redux.svg" },
       { name: "Tailwind", image: "/assets/skills/tailwind.png" },
     ],
     backend_tech: [
-      { name: "Node", image: "/assets/skills/node.png" },
+      { name: "Node.js", image: "/assets/skills/node.png" },
       { name: "Sequelize", image: "/assets/skills/sequelize.svg" },
       { name: "PostgreSQL", image: "/assets/skills/postgresql.svg" },
     ],
     description:
-      "I'm working on an app designed for dental healthcare centers to facilitate appointments with doctors. It consists of two sections: one for patients and another for doctors or administrators. The app manages patient appointments, maintains their medical history, creates digital odontograms for each patient, and keeps track of inventory records.",
+      "A dental practice application with separate workflows for patients and clinic staff.",
     descriptionEs:
-      "Estoy desarrollando una app para centros odontológicos que facilita la gestión de citas. Incluye un área para pacientes y otra para doctores/administradores. Administra turnos, historial médico, odontogramas digitales e inventario.",
+      "Aplicación para consultorios odontológicos con flujos para pacientes y personal de la clínica.",
+    contributions: [
+      "Built appointment management, patient medical histories, and digital odontograms.",
+      "Implemented inventory management and connected the React interface to a Node.js and PostgreSQL backend.",
+    ],
+    contributionsEs: [
+      "Desarrollé la gestión de citas, el historial clínico de pacientes y los odontogramas digitales.",
+      "Implementé la gestión de inventario y conecté la interfaz en React con el backend en Node.js y PostgreSQL.",
+    ],
     deployment: { status: "live", url: "https://dental-care-pi.vercel.app/" },
     sourceCode: "https://github.com/CristopherAreche/DentalCare",
   },
@@ -137,10 +172,17 @@ export const projects: Project[] = [
       { name: "React", image: "/assets/skills/react.png" },
       { name: "Tailwind", image: "/assets/skills/tailwind.png" },
     ],
-    description:
-      "Welcome to my Fitness Webapp, your go-to destination for targeted workouts based on specific body regions. This user-friendly website offers a curated collection of exercises designed to tone and strengthen different parts of your body",
+    description: "An exercise discovery application organized by body region.",
     descriptionEs:
-      "Bienvenido a mi Fitness Webapp, tu espacio para encontrar rutinas enfocadas por zona corporal. Incluye una colección de ejercicios pensada para tonificar y fortalecer distintas partes del cuerpo.",
+      "Aplicación para explorar ejercicios organizados por zona del cuerpo.",
+    contributions: [
+      "Built a React interface for browsing exercises by the body region a user wants to train.",
+      "Created responsive layouts with Tailwind CSS for mobile and desktop browsing.",
+    ],
+    contributionsEs: [
+      "Desarrollé una interfaz en React para explorar ejercicios según la zona que se quiere entrenar.",
+      "Creé diseños adaptables con Tailwind CSS para móvil y escritorio.",
+    ],
     deployment: {
       status: "live",
       url: "https://fitness-website-ashy-nine.vercel.app/",
@@ -152,23 +194,29 @@ export const projects: Project[] = [
     name: "Pokemon Webapp",
     image: "/assets/projects/pokemon.jpg",
     frontend_tech: [
-      { name: "HTML", image: "/assets/skills/html.png" },
-      { name: "CSS", image: "/assets/skills/css.png" },
-      { name: "JavaScript", image: "/assets/skills/javascript.png" },
+      { name: "TypeScript", image: "/assets/skills/typescript.png" },
       { name: "React", image: "/assets/skills/react.png" },
-      { name: "Redux-Toolkit", image: "/assets/skills/redux.svg" },
+      { name: "Next.js", image: "/assets/skills/nextjs.png" },
     ],
     backend_tech: [
-      { name: "Node", image: "/assets/skills/node.png" },
+      { name: "Node.js", image: "/assets/skills/node.png" },
       { name: "Prisma", image: "/assets/skills/prisma.png" },
       { name: "Supabase", image: "/assets/skills/supabase.png" },
       { name: "PostgreSQL", image: "/assets/skills/postgresql.svg" },
       { name: "Vercel", image: "/assets/skills/vercel.svg" },
     ],
     description:
-      "Pokemon Fullstack App - Browse all 151 original Pokemon with search/filter, create custom Pokemon with file uploads, and enjoy a beautiful responsive design. Built with Next.js 15, TypeScript, Supabase, and authentic Pokemon styling. Features pagination, real-time search, and smooth animations!",
+      "A full-stack Pokédex combining Pokémon discovery with custom character creation.",
     descriptionEs:
-      "App fullstack de Pokemon: explora los 151 Pokemon originales con búsqueda y filtros, crea Pokemon personalizados con carga de archivos y disfruta un diseño responsive. Construida con Next.js, TypeScript y Supabase.",
+      "Pokédex full stack que combina la exploración de Pokémon con la creación de personajes personalizados.",
+    contributions: [
+      "Built search, filtering, and pagination for the original 151 Pokémon.",
+      "Implemented custom Pokémon creation with file uploads using Next.js, TypeScript, and Supabase.",
+    ],
+    contributionsEs: [
+      "Desarrollé la búsqueda, los filtros y la paginación para los 151 Pokémon originales.",
+      "Implementé la creación de Pokémon personalizados con carga de archivos usando Next.js, TypeScript y Supabase.",
+    ],
     deployment: {
       status: "live",
       url: "https://pokemon-eta-swart.vercel.app/",
@@ -186,10 +234,16 @@ export const projects: Project[] = [
       { name: "React", image: "/assets/skills/react.png" },
       { name: "Bootstrap", image: "/assets/skills/bootstrap.svg" },
     ],
-    description:
-      "Explore the quirky world of Rick and Morty through my React.js project, featuring an extensive character encyclopedia. Discover character traits, episode appearances, and filter options for status, species, and gender.",
-    descriptionEs:
-      "Explora el universo de Rick and Morty con este proyecto en React.js que incluye una enciclopedia completa de personajes. Descubre características, episodios y filtros por estado, especie y género.",
+    description: "A character explorer for the Rick and Morty universe.",
+    descriptionEs: "Explorador de personajes del universo de Rick and Morty.",
+    contributions: [
+      "Built a React interface to browse characters and view their details and episode appearances.",
+      "Implemented filters by status, species, and gender, with responsive layouts using Bootstrap.",
+    ],
+    contributionsEs: [
+      "Desarrollé una interfaz en React para explorar personajes y consultar sus detalles y apariciones en episodios.",
+      "Implementé filtros por estado, especie y género, con diseños adaptables usando Bootstrap.",
+    ],
     deployment: {
       status: "live",
       url: "https://cristopherareche.github.io/rick_and_morty_website/",
