@@ -97,7 +97,7 @@ const Hero = () => {
             {t.hero.viewWork}
             <FaArrowRight aria-hidden="true" />
           </Link>
-          <Link
+          {/* <Link
             href="/assets/CV.pdf?v=10d7034bb736"
             target="_blank"
             rel="noopener noreferrer"
@@ -105,7 +105,7 @@ const Hero = () => {
           >
             <FaFileAlt aria-hidden="true" />
             {t.hero.resume}
-          </Link>
+          </Link> */}
           <a href={`mailto:${CONTACT_EMAIL}`} className={actionClass}>
             {t.hero.contact}
           </a>
