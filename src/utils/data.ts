@@ -59,7 +59,10 @@ export const projects: Project[] = [
       "Desarrollé el flujo inicial para definir objetivos, experiencia, equipo y disponibilidad.",
       "Conecté esos datos con la generación de planes con IA y la presentación de las sesiones.",
     ],
-    deployment: { status: "in-progress" },
+    deployment: {
+      status: "live",
+      url: "https://won-sigma.vercel.app/demo",
+    },
     sourceCode: "https://github.com/CristopherAreche/WON",
   },
   {
