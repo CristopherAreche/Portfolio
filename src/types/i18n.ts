@@ -21,6 +21,7 @@ export interface UiTranslations {
   };
   hero: {
     sectionLabel: string;
+    statusBadge: string;
     greeting: string;
     role: string;
     specialty: string;
@@ -42,10 +43,20 @@ export interface UiTranslations {
     githubAria: string;
     professionalProfile: string;
   };
+  experience: {
+    sectionLabel: string;
+    heading: string;
+    subheading: string;
+    workHeading: string;
+    educationHeading: string;
+  };
   projects: {
     sectionLabel: string;
     heading: string;
     introduction: string;
+    featuredHeading: string;
+    featuredIntro: string;
+    viewAll: string;
     contribution: string;
     stack: string;
     independent: string;

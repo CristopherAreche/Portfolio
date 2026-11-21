@@ -45,9 +45,9 @@ export function generateMetadata({ params }: ProjectsPageProps): Metadata {
 
 export default function ProjectsPage() {
   return (
-    <>
+    <div className="flex w-full flex-col items-center">
       <DeferredParticlesBackground />
       <Projects />
-    </>
+    </div>
   );
 }

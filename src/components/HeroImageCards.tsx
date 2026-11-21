@@ -16,7 +16,7 @@ const DEFAULT_HERO_CARDS: HeroImageCard[] = [
     id: "portrait-card-1",
     image: "/assets/profile/training.jpg",
     alt: "Portrait photo of Cristopher Areche, card one",
-    label: "Lifter",
+    label: "Discipline",
     accentClassName: "from-emerald-500/20 via-transparent to-slate-950/70",
   },
   {
@@ -30,7 +30,7 @@ const DEFAULT_HERO_CARDS: HeroImageCard[] = [
     id: "portrait-card-3",
     image: "/assets/profile/portrait.jpg",
     alt: "Portrait photo of Cristopher Areche, card three",
-    label: "Creator",
+    label: "Engineer",
     accentClassName: "from-amber-400/20 via-transparent to-slate-950/75",
   },
 ];

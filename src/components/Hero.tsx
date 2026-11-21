@@ -17,23 +17,25 @@ const coreStack = [
   "TypeScript",
   "Next.js",
   "Storybook",
+  "Tailwind CSS",
 ];
 const backendStack = [
   "Node.js",
   "Express",
   "C# / .NET",
+  "ASP.NET Web API",
   "PostgreSQL",
   "SQL Server",
   "Supabase",
 ];
 const workflowStack = [
+  "Design Systems",
   "Figma",
-  "React Testing Library",
-  "Git",
-  "GitLab CI/CD",
   "Amazon RDS",
-  "Vercel",
+  "GitLab CI/CD",
+  "React Testing Library",
   "Cursor",
+  "Vercel",
 ];
 
 const Hero = () => {
@@ -72,6 +74,10 @@ const Hero = () => {
       className="portfolio-hero mx-auto grid w-full max-w-6xl min-w-0 gap-12 px-6 py-4 text-grey_text dark:text-dark_mode_text sm:px-8 sm:py-8 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,0.85fr)] lg:items-center lg:gap-16 lg:py-12"
     >
       <div className="min-w-0">
+        <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-green-700/30 bg-green-500/10 px-3.5 py-1 text-xs font-semibold text-green-800 dark:border-green-400/30 dark:bg-green-400/10 dark:text-green-300">
+          <span className="h-2 w-2 rounded-full bg-green-600 dark:bg-green-400 animate-pulse" />
+          {t.hero.statusBadge}
+        </div>
         <p className="mb-3 text-base text-slate-600 dark:text-slate-300">
           {t.hero.greeting}
         </p>
@@ -97,15 +103,15 @@ const Hero = () => {
             {t.hero.viewWork}
             <FaArrowRight aria-hidden="true" />
           </Link>
-          {/* <Link
-            href="/assets/CV.pdf?v=10d7034bb736"
+          <Link
+            href="/assets/CV.pdf?v=b2792c41"
             target="_blank"
             rel="noopener noreferrer"
             className={actionClass}
           >
             <FaFileAlt aria-hidden="true" />
             {t.hero.resume}
-          </Link> */}
+          </Link>
           <a href={`mailto:${CONTACT_EMAIL}`} className={actionClass}>
             {t.hero.contact}
           </a>

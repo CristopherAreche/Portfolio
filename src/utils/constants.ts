@@ -5,7 +5,7 @@ export const LINKEDIN_URL =
   "https://www.linkedin.com/in/cristopher-areche-guillen-01a603186/";
 export const SITE_URL = "https://cristopher-portfolio.vercel.app";
 export const SITE_NAME = "Cristopher Areche";
-export const SITE_TITLE = "Cristopher Areche | Software Engineer";
+export const SITE_TITLE = "Cristopher Areche | Senior Software Engineer";
 export const SITE_DESCRIPTION =
-  "Software Engineer specializing in building scalable web applications with React, Next.js, Node.js, and PostgreSQL. Explore my portfolio of full-stack projects.";
+  "Senior Software Engineer with 4+ years building high-scale web, mobile, and backend features across banking and healthcare. React, React Native, TypeScript, and .NET.";
 export const SITE_OG_IMAGE = "/assets/profile/portrait.jpg";

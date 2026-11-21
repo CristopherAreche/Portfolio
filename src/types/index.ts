@@ -1,15 +1,3 @@
-export interface Skill {
-  id: number;
-  name: string;
-  image: string;
-}
-
-export interface Tool {
-  id: number;
-  name: string;
-  image: string;
-}
-
 export interface TechItem {
   name: string;
   image: string;
@@ -42,6 +30,32 @@ export interface Project {
   contributionsEs: string[];
   deployment: ProjectDeployment;
   sourceCode: ExternalUrl;
+  featured?: boolean;
 }
 
 export type ProjectItemProps = Project;
+
+export interface ExperienceItem {
+  id: string;
+  role: string;
+  roleEs: string;
+  company: string;
+  location: string;
+  locationEs: string;
+  period: string;
+  periodEs: string;
+  badge?: string;
+  badgeEs?: string;
+  highlights: string[];
+  highlightsEs: string[];
+  skills: string[];
+}
+
+export interface EducationItem {
+  id: string;
+  degree: string;
+  degreeEs: string;
+  institution: string;
+  period: string;
+  periodEs: string;
+}

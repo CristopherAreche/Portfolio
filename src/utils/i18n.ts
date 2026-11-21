@@ -4,13 +4,13 @@ import { LanguageCode } from "@/types";
 export const uiTranslations: TranslationDictionary = {
   en: {
     metadata: {
-      siteTitle: "Cristopher Areche | Software Engineer",
+      siteTitle: "Cristopher Areche | Senior Software Engineer",
       siteDescription:
-        "Software Engineer with 4+ years of experience across banking and healthcare. React, React Native, TypeScript, and design systems.",
+        "Senior Software Engineer with 4+ years building high-scale web, mobile, and backend features across banking and healthcare. React, React Native, TypeScript, and .NET.",
       projectsTitle: "Projects",
       projectsDescription:
-        "Explore my portfolio of full-stack web development projects built with React, Next.js, Node.js, and PostgreSQL.",
-      jobTitle: "Software Engineer",
+        "Explore selected engineering projects built with React, Next.js, TypeScript, Node.js, Supabase, and PostgreSQL.",
+      jobTitle: "Senior Software Engineer",
     },
     layout: {
       skipToContent: "Skip to main content",
@@ -25,16 +25,17 @@ export const uiTranslations: TranslationDictionary = {
     },
     hero: {
       sectionLabel: "About me",
+      statusBadge: "U.S. Citizen · Open to Remote & Relocation (NY / Boston)",
       greeting: "Hi, I’m",
       role: "Software Engineer",
-      specialty: "React · React Native · TypeScript · Design systems",
+      specialty: "React · React Native · TypeScript · C#/.NET · Design Systems",
       descriptionFirst:
-        "I build web and mobile applications with 4+ years of experience across banking and healthcare.",
+        "Software Engineer with 4+ years building web, mobile, and backend features across digital banking and healthcare.",
       descriptionSecond:
-        "I build reusable interfaces, connect them to APIs and databases, and use design systems to keep web and mobile experiences consistent and maintainable.",
+        "Contributes to Qik’s shared UI foundation for a banking app serving 1M+ customers. Combines React/TypeScript and React Native design systems with Node.js, C#/.NET, and SQL databases.",
       frontend: "Frontend & mobile",
       backend: "Backend & data",
-      tools: "Tools",
+      tools: "Delivery & practices",
       resume: "Resume / CV",
       viewWork: "View work",
       contact: "Contact",
@@ -48,12 +49,24 @@ export const uiTranslations: TranslationDictionary = {
       githubAria: "Visit GitHub profile",
       professionalProfile: "Professional profile",
     },
+    experience: {
+      sectionLabel: "Work Experience",
+      heading: "Experience & Track Record",
+      subheading:
+        "Production engineering across digital banking, enterprise integrations, and regulated healthcare platforms.",
+      workHeading: "Professional Experience",
+      educationHeading: "Education & Credentials",
+    },
     projects: {
       sectionLabel: "Projects",
-      heading: "Selected work",
+      heading: "Selected Work",
       introduction:
-        "Personal projects I designed and built independently, from responsive interfaces to full-stack applications.",
-      contribution: "What I built",
+        "Featured full-stack applications with modern architecture, interactive state machines, and database integrations.",
+      featuredHeading: "Featured Projects",
+      featuredIntro:
+        "Selected full-stack and mobile applications showcasing frontend craft, API design, and system architecture.",
+      viewAll: "View all projects",
+      contribution: "Key technical contributions",
       stack: "Technologies",
       independent: "Independent project",
       previewAria: (name: string) => `Preview of ${name}`,
@@ -76,13 +89,13 @@ export const uiTranslations: TranslationDictionary = {
   },
   es: {
     metadata: {
-      siteTitle: "Cristopher Areche | Ingeniero de Software",
+      siteTitle: "Cristopher Areche | Ingeniero de Software Senior",
       siteDescription:
-        "Ingeniero de software con más de 4 años de experiencia en banca y salud. React, React Native, TypeScript y sistemas de diseño.",
+        "Ingeniero de software senior con más de 4 años desarrollando aplicaciones web, móviles y backend en banca y salud. React, React Native, TypeScript y .NET.",
       projectsTitle: "Proyectos",
       projectsDescription:
-        "Explora mi portafolio de proyectos full-stack creados con React, Next.js, Node.js y PostgreSQL.",
-      jobTitle: "Ingeniero de Software",
+        "Explora proyectos seleccionados de ingeniería desarrollados con React, Next.js, TypeScript, Node.js, Supabase y PostgreSQL.",
+      jobTitle: "Ingeniero de Software Senior",
     },
     layout: {
       skipToContent: "Saltar al contenido principal",
@@ -97,16 +110,17 @@ export const uiTranslations: TranslationDictionary = {
     },
     hero: {
       sectionLabel: "Sobre mí",
+      statusBadge: "Ciudadano EE.UU. · Disponible Remoto y Reubicación (NY / Boston)",
       greeting: "Hola, soy",
       role: "Ingeniero de Software",
-      specialty: "React · React Native · TypeScript · Sistemas de diseño",
+      specialty: "React · React Native · TypeScript · C#/.NET · Sistemas de Diseño",
       descriptionFirst:
-        "Desarrollo aplicaciones web y móviles con más de 4 años de experiencia en banca y salud.",
+        "Ingeniero de software con más de 4 años desarrollando soluciones web, móviles y backend en banca digital y salud.",
       descriptionSecond:
-        "Creo interfaces reutilizables, las conecto con APIs y bases de datos, y uso sistemas de diseño para mantener experiencias web y móviles consistentes y fáciles de mantener.",
+        "Contribuyo a la base de UI compartida de Qik para una app bancaria con más de 1M de clientes. Combino sistemas de diseño en React/TypeScript y React Native con Node.js, C#/.NET y bases de datos SQL.",
       frontend: "Frontend y móvil",
       backend: "Backend y datos",
-      tools: "Herramientas",
+      tools: "Entrega y prácticas",
       resume: "Ver CV",
       viewWork: "Ver proyectos",
       contact: "Contactar",
@@ -120,12 +134,24 @@ export const uiTranslations: TranslationDictionary = {
       githubAria: "Visitar perfil de GitHub",
       professionalProfile: "Perfil profesional",
     },
+    experience: {
+      sectionLabel: "Experiencia Laboral",
+      heading: "Experiencia y Trayectoria",
+      subheading:
+        "Ingeniería en producción en banca digital a gran escala, integraciones empresariales y plataformas reguladas de salud.",
+      workHeading: "Experiencia Profesional",
+      educationHeading: "Educación y Certificaciones",
+    },
     projects: {
       sectionLabel: "Proyectos",
-      heading: "Proyectos seleccionados",
+      heading: "Proyectos Seleccionados",
       introduction:
-        "Proyectos personales que diseñé y desarrollé de forma independiente, desde interfaces adaptables hasta aplicaciones full stack.",
-      contribution: "Lo que desarrollé",
+        "Aplicaciones full-stack con arquitectura moderna, flujos interactivos e integración con bases de datos.",
+      featuredHeading: "Proyectos Destacados",
+      featuredIntro:
+        "Selección de proyectos que demuestran arquitectura frontend, diseño de APIs y gestión de datos.",
+      viewAll: "Ver todos los proyectos",
+      contribution: "Aportes técnicos clave",
       stack: "Tecnologías",
       independent: "Proyecto independiente",
       previewAria: (name: string) => `Vista previa de ${name}`,

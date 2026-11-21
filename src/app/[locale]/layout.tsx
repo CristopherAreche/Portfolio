@@ -131,7 +131,7 @@ export default function LocaleLayout({
           <SkipToContentLink />
           <Navbar />
           <main id="main-content" className="relative min-h-screen pt-[56px]">
-            <div className="min-h-[calc(100vh-56px)] py-10 flex items-start justify-center overflow-x-hidden">
+            <div className="min-h-[calc(100vh-56px)] py-10 flex flex-col items-center justify-start overflow-x-hidden">
               {children}
             </div>
           </main>
