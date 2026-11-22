@@ -10,6 +10,7 @@ import { getLocalizedPathname } from "@/utils/locale";
 const FeaturedProjects = () => {
   const { language, t } = useLanguage();
   const featured = projects.filter((p) => p.featured);
+  const showMoreLink = projects.length > 1;
 
   return (
     <section
@@ -26,13 +27,15 @@ const FeaturedProjects = () => {
           </p>
         </header>
 
-        <Link
-          href={getLocalizedPathname(language, "/projects")}
-          className="inline-flex min-h-[44px] shrink-0 items-center gap-2 text-sm font-semibold text-green-700 transition-colors hover:text-green-800 dark:text-green-400 dark:hover:text-green-300"
-        >
-          {t.projects.viewAll}
-          <FaArrowRight aria-hidden="true" className="h-3.5 w-3.5" />
-        </Link>
+        {showMoreLink && (
+          <Link
+            href={getLocalizedPathname(language, "/projects")}
+            className="inline-flex min-h-[44px] shrink-0 items-center gap-2 text-sm font-semibold text-green-700 transition-colors hover:text-green-800 dark:text-green-400 dark:hover:text-green-300"
+          >
+            {t.projects.viewAll}
+            <FaArrowRight aria-hidden="true" className="h-3.5 w-3.5" />
+          </Link>
+        )}
       </div>
 
       <div className="space-y-12 sm:space-y-16">
@@ -41,15 +44,17 @@ const FeaturedProjects = () => {
         ))}
       </div>
 
-      <div className="mt-12 text-center sm:mt-16">
-        <Link
-          href={getLocalizedPathname(language, "/projects")}
-          className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white/70 px-6 py-3 text-sm font-semibold transition-colors hover:border-green-700 hover:text-green-700 dark:border-slate-700 dark:bg-slate-900/70 dark:hover:border-green-400 dark:hover:text-green-400"
-        >
-          {t.projects.viewAll}
-          <FaArrowRight aria-hidden="true" className="h-3.5 w-3.5" />
-        </Link>
-      </div>
+      {showMoreLink && (
+        <div className="mt-12 text-center sm:mt-16">
+          <Link
+            href={getLocalizedPathname(language, "/projects")}
+            className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white/70 px-6 py-3 text-sm font-semibold transition-colors hover:border-green-700 hover:text-green-700 dark:border-slate-700 dark:bg-slate-900/70 dark:hover:border-green-400 dark:hover:text-green-400"
+          >
+            {t.projects.viewAll}
+            <FaArrowRight aria-hidden="true" className="h-3.5 w-3.5" />
+          </Link>
+        </div>
+      )}
     </section>
   );
 };

@@ -32,7 +32,7 @@ export const uiTranslations: TranslationDictionary = {
       descriptionFirst:
         "Software Engineer with 4+ years building web, mobile, and backend features across digital banking and healthcare.",
       descriptionSecond:
-        "Contributes to Qik’s shared UI foundation for a banking app serving 1M+ customers. Combines React/TypeScript and React Native design systems with Node.js, C#/.NET, and SQL databases.",
+        "Specialized in architecting cross-platform design systems with React, React Native, and TypeScript, backed by robust APIs and data layers in Node.js, C#/.NET, and SQL databases.",
       frontend: "Frontend & mobile",
       backend: "Backend & data",
       tools: "Delivery & practices",
@@ -59,13 +59,13 @@ export const uiTranslations: TranslationDictionary = {
     },
     projects: {
       sectionLabel: "Projects",
-      heading: "Selected Work",
+      heading: "Featured Project",
       introduction:
-        "Featured full-stack applications with modern architecture, interactive state machines, and database integrations.",
-      featuredHeading: "Featured Projects",
+        "My latest independent application showcasing product architecture, AI integration, and full-stack engineering.",
+      featuredHeading: "Featured Project",
       featuredIntro:
-        "Selected full-stack and mobile applications showcasing frontend craft, API design, and system architecture.",
-      viewAll: "View all projects",
+        "My latest independent application showcasing product architecture, AI integration, and full-stack engineering.",
+      viewAll: "View project",
       contribution: "Key technical contributions",
       stack: "Technologies",
       independent: "Independent project",
@@ -117,7 +117,7 @@ export const uiTranslations: TranslationDictionary = {
       descriptionFirst:
         "Ingeniero de software con más de 4 años desarrollando soluciones web, móviles y backend en banca digital y salud.",
       descriptionSecond:
-        "Contribuyo a la base de UI compartida de Qik para una app bancaria con más de 1M de clientes. Combino sistemas de diseño en React/TypeScript y React Native con Node.js, C#/.NET y bases de datos SQL.",
+        "Especializado en la arquitectura de sistemas de diseño multiplataforma con React, React Native y TypeScript, respaldados por APIs y capas de datos sólidas en Node.js, C#/.NET y bases de datos SQL.",
       frontend: "Frontend y móvil",
       backend: "Backend y datos",
       tools: "Entrega y prácticas",
@@ -144,13 +144,13 @@ export const uiTranslations: TranslationDictionary = {
     },
     projects: {
       sectionLabel: "Proyectos",
-      heading: "Proyectos Seleccionados",
+      heading: "Proyecto Destacado",
       introduction:
-        "Aplicaciones full-stack con arquitectura moderna, flujos interactivos e integración con bases de datos.",
-      featuredHeading: "Proyectos Destacados",
+        "Mi último proyecto independiente que demuestra arquitectura de producto, integración con IA e ingeniería full stack.",
+      featuredHeading: "Proyecto Destacado",
       featuredIntro:
-        "Selección de proyectos que demuestran arquitectura frontend, diseño de APIs y gestión de datos.",
-      viewAll: "Ver todos los proyectos",
+        "Mi último proyecto independiente que demuestra arquitectura de producto, integración con IA e ingeniería full stack.",
+      viewAll: "Ver proyecto",
       contribution: "Aportes técnicos clave",
       stack: "Tecnologías",
       independent: "Proyecto independiente",
